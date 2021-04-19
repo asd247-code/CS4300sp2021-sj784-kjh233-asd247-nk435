@@ -18,6 +18,26 @@
             <div class="form-group">
                 <input id="input" type="text" name="search" class="form-control" placeholder="Input Your Text Here">
             </div>
+            {% if genres %}
+                {% for genre in genres %}  
+                    <label class="container">{{genre}}
+                        <input type="checkbox" name="{{genre}}" >
+                        <span class="checkmark">{{genre}}</span>
+                    </label>
+                {% endfor %}
+            {% endif %}
+            <br>
+            {% if artists %}
+                {% for artist in artists %}  
+                    <label class="container">{{artist}}
+                        <input type="checkbox" name="{{artist}}" >
+                        <span class="checkmark">{{artist}}</span>
+                    </label>
+                {% endfor %}
+            {% endif %}
+            <br>
+            
+            
             <button type="submit" class="btn btn-info"> Go! </button>
         </form>
         <form class="form-inline global-search">
